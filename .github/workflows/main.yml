@@ -30,8 +30,16 @@ jobs:
       - name: Run generate.py
         run: python generate.py
 
+      - name: Print profiles1.csv
+        run: cat profiles1.csv
+
       - name: Run csvtojson.py
         run: python csvtojson.py
+
+      - name: Show data.json contents
+        run: cat data.json
+      - name: Check if data.json exists
+        run: ls -l data.json
       
       - name: Run tests
         run: python -m unittest discover -s tests
