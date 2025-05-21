@@ -16,9 +16,9 @@ class TestCSVToJSON(unittest.TestCase):
             data = json.load(f)
             sample = data[0]
             expected_keys = [
-                'first_name', 'last_name', 'email', 'gender', 'city',
-                'phone', 'birthdate', 'job_title', 'company', 'country',
-                'username', 'password']
+                'Givenname', 'Surname', 'Streetaddress', 'City', 'Zipcode',
+                'Country', 'CountryCode', 'NationalId', 'TelephoneCountryCode', 'Telephone',
+                'Birthday', 'ConsentToContact']
             for key in expected_keys:
                 self.assertIn(key, sample)
 
